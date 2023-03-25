@@ -10,4 +10,4 @@ RUN cd /
 RUN pip install -U pip && pip install -U -r requirements.txt
 WORKDIR /app
 COPY . .
-CMD ["python", "-m Adarsh"]
+CMD ["python", "bot.py"]
