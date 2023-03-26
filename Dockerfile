@@ -1,8 +1,15 @@
-FROM python:3.9.2-slim-buster
-RUN mkdir /app && chmod 777 /app
+FROM python:3.10
+
+RUN apt update && apt upgrade -y
+RUN apt install git -y
+COPY requirements.txt /requirements.txt
+
+RUN cd /
+RUN pip install -U pip && pip install -U -r requirements.txt
 WORKDIR /app
-ENV DEBIAN_FRONTEND=noninteractive
-RUN apt -qq update && apt -qq install -y git python3 python3-pip ffmpeg
+
 COPY . .
-RUN pip3 install --no-cache-dir -r requirements.txt
-CMD python -m Adarsh
+
+CMD ["python", "bot.py"]
+
+
