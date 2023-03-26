@@ -3,7 +3,7 @@ services:
   - type: web
     name: FileStreamBot-2
     env: python
-    startCommand: python -m Adarsh
+    startCommand: python3 main.py
     buildCommand: pip3 install -U -r requirements.txt
     repo: https://github.com/Maliksahid786/FileStreamBot-2 # optional
     region: oregon # optional (defaults to oregon)
