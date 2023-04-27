@@ -12,7 +12,7 @@ class Var(object):
     API_ID = int(getenv('API_ID', '19455849'))
     API_HASH = str(getenv('API_HASH', '71498d69fad014add7e9f717bfde4b79'))
     BOT_TOKEN = str(getenv('BOT_TOKEN', '5451383761:AAGYe32Dv1Qe2NBvogzclNzCx-7Geup9pYc'))
-    name = str(getenv('name', 'Lababbot'))
+    name = str(getenv('name', 'Bottest'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '4'))
     BIN_CHANNEL = int(getenv('BIN_CHANNEL', '-1001620024364'))
@@ -30,7 +30,7 @@ class Var(object):
     else:
         ON_HEROKU = False
     FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
-    FQDN = "testbot-fgjd.onrender.com" 
+    FQDN = "malikbots.onrender.com" 
     HAS_SSL = True
     HAS_SSL=bool(getenv('HAS_SSL',False))
     if HAS_SSL:
