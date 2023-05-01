@@ -1,5 +1,6 @@
 from Adarsh.vars import Var
 from Adarsh.bot import StreamBot
+from Adarsh.bot.plugins.stream import get_online_link, private_receive_handler
 from Adarsh.utils.human_readable import humanbytes
 from Adarsh.utils.file_properties import get_file_ids
 from Adarsh.server.exceptions import InvalidHash
@@ -19,13 +20,31 @@ async def render_page(id, secure_hash):
     if str(file_data.mime_type.split('/')[0].strip()) == 'video':
         async with aiofiles.open('Adarsh/template/req.html') as r:
             heading = 'Watch {}'.format(file_data.file_name)
+            
+            online_link = urllib.parse.urljoin(Var.URL, f'{str(id)}/{file_data.file_name}?hash={secure_hash}')
+
+            download_link = urllib.parse.urljoin(Var.URL, f'{str(id)}/{file_data.file_name}?hash={secure_hash}')
+
+            vcl_link = urllib.parse.urljoin(Var.URL, f'{str(id)}/{file_data.file_name}?hash={secure_hash}')
+
             tag = file_data.mime_type.split('/')[0].strip()
-            html = (await r.read()).replace('tag', tag) % (heading, file_data.file_name, src)
+
+            html = (await r.read()).replace('tag', tag) % (heading, file_data.file_name, src, online_link, download_link, vcl_link)
+
     elif str(file_data.mime_type.split('/')[0].strip()) == 'audio':
         async with aiofiles.open('Adarsh/template/req.html') as r:
             heading = 'Listen {}'.format(file_data.file_name)
+
+ 
+            online_link = urllib.parse.urljoin(Var.URL, f'{str(id)}/{file_data.file_name}?hash={secure_hash}')
+
+            download_link = urllib.parse.urljoin(Var.URL, f'{str(id)}/{file_data.file_name}?hash={secure_hash}')
+
+            vcl_link = urllib.parse.urljoin(Var.URL, f'{str(id)}/{file_data.file_name}?hash={secure_hash}')
+
             tag = file_data.mime_type.split('/')[0].strip()
-            html = (await r.read()).replace('tag', tag) % (heading, file_data.file_name, src)
+
+            html = (await r.read()).replace('tag', tag) % (heading, file_data.file_name, src, online_link, download_link, vcl_link)
     else:
         async with aiofiles.open('Adarsh/template/dl.html') as r:
             async with aiohttp.ClientSession() as s:
