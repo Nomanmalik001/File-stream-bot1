@@ -17,12 +17,12 @@ async def maintainers(b,m):
     except Exception:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="hhh 😎",
+                    text="I am Made By [Potterhub👿](https://t.me/potterhub)",
                     
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("Developer💻", url="https://t.me/sahid_malik")
+                                InlineKeyboardButton("Owner💻", url=f"https://t.me/Pankajpandiyar")
                             ]
                         ]
                     ),
@@ -30,19 +30,19 @@ async def maintainers(b,m):
                     disable_web_page_preview=True)
             
          
-@StreamBot.on_message(filters.regex("Update"))
+@StreamBot.on_message(filters.regex("Subscribe ❤️"))
 async def follow_user(b,m):
     try:
        await b.send_message(chat_id=m.chat.id,text="HELLO",quote=True)
     except Exception:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="<B>HERE'S THE FOLLOW LINK</B>",
+                    text="<B>HERE'S THE SUBSCRIBE LINK</B>",
                     
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("update", url="https://t.me/m_h_updates")
+                                InlineKeyboardButton("Subscribe ❤️", url=f"https://youtube.com/@mgod4469")
                             ]
                         ]
                     ),
@@ -63,7 +63,7 @@ async def start(bot, update):
     
 @StreamBot.on_message(filters.command("list"))
 async def list(l, m):
-    LIST_MSG = "Hi! {} Here is a list of all my commands \n \n 1 . `start⚡️` \n 2. `help📚` \n 3. `login🔑` \n 4.`follow❤️` \n 5. `ping📡` \n 6. `status📊` \n 7. `DC` this tells your telegram dc \n 8. `maintainers😎` "
+    LIST_MSG = "Hi! {} Here is a list of all my commands \n \n 1 . `start⚡️` \n 2. `help📚` \n 3. `login🔑` \n 4.`Subscribe ❤️` \n 5. `ping📡` \n 6. `status📊` \n 7. `DC` this tells your telegram dc \n 8. `maintainers😎` "
     await l.send_message(chat_id = m.chat.id,
         text = LIST_MSG.format(m.from_user.mention(style="md"))
         
