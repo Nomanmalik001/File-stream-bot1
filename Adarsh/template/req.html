@@ -1,166 +1,514 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta property="og:image" content="https://graph.org/file/a28936cad8cfff34bd0c2.jpg" itemprop="thumbnailUrl">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="monetag" content="035a24fd1e38c50abc09f732408e9287">
-    <title>%s</title>
-    <link rel="stylesheet" type='text/css' href="https://drive----google.com/uc?export=view&id=1pVLG4gZy7jdow3sO-wFS06aP_A9QX0O6">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Delius">
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.9/plyr.css" />
-    
-        									 
-<style>
-      marquee{
-      font-size: 30px;
-      font-weight: 800;
-      color: #FFFFFF;
-      font-family: serif;
-      background-color: #232323;
+  <link type="text/css" rel="stylesheet" id="dark-mode-custom-link" />
+  <link type="text/css" rel="stylesheet" id="dark-mode-general-link" />
+  <style type="text/css" id="dark-mode-custom-style" lang="en"></style>
+  <style type="text/css" id="dark-mode-native-style" lang="en"></style>
+  <style type="text/css" id="dark-mode-native-sheet" lang="en"></style>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{heading}}</title>
+    <meta
+      name="description"
+      content="stream your videos and Movie in high-quality 1080p Free and get tools to boost engagement all in one place."
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700"
+      rel="stylesheet"
+    />
+     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
+    <!-- popup -->
+    <!-- popup -->
+  </head>
+  <body data-new-gr-c-s-check-loaded="8.904.0" data-gr-ext-installed="">
+    <style>
+      .alert {
+        padding: 20px;
+        border-radius: 5px;
+        background-color: #e7e0e0;
+        color: #817b8b;
+      }
+
+      .closebtn {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .closebtn:hover {
+        color: black;
       }
     </style>
     <style>
-      marquee{
-      font-size: 30px;
-      font-weight: 800;
-      color: #FFFFFF;
-      font-family: serif;
+      /* VARIABLES */
+      /* BASE */
+      html,
+      body {
+        font-family: "Roboto", sans-serif;
+        font-size: 1em;
+        background-color: #efefef;
+        line-height: 1.4;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .containerbox {
+        overflow: hidden;
+        *zoom: 1;
+        margin: 0 10px;
+      }
+
+      .site-content {
+        padding: 20px;
+      }
+
+      /* HEADER */
+      .header {
+        left: 0;
+        right: 0;
+        height: 55px;
+        line-height: 55px;
+        color: #ffffff;
+        background-color: #2962ff;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      }
+
+      .header__logo {
+        font-weight: 700;
+        padding: 0 25px;
+        float: left;
+      }
+
+      /* MENU */
+      .menu {
+        float: left;
+      }
+
+      .menu a {
+        padding: 0 10px;
+      }
+
+      .menu a:hover {
+        color: #c5cae9;
+      }
+
+      /* RESPONSIVE */
+      @media only screen and (max-width: 768px) {
+        .site-pusher,
+        .site-container {
+          height: 100%;
+        }
+
+        .site-container {
+          overflow: hidden;
+        }
+
+        .site-pusher {
+          transition-duration: 0.3s;
+          transform: translateX(0px);
+        }
+
+        .site-content {
+          position: absolute;
+          top: 55px;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          padding-top: 0;
+          overflow-y: scroll;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        .header__icon {
+          position: relative;
+          display: block;
+          float: left;
+          width: 50px;
+          height: 50px;
+          cursor: pointer;
+        }
+
+        .header__icon:after {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 1rem;
+          height: 0;
+          top: 16px;
+          left: 15px;
+          box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff;
+        }
+
+        .menu {
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          background-color: #3849a2;
+          /*    overflow-y: scroll;
+          -webkit-overflow-scrolling: touch;*/
+          width: 250px;
+          transform: translateX(-250px);
+        }
+
+        .menu a {
+          display: block;
+          height: 40px;
+          text-align: center;
+          line-height: 40px;
+          border-bottom: 1px solid #3f51b5;
+        }
+
+        .with--sidebar .site-pusher {
+          transform: translateX(250px);
+        }
+
+        .with--sidebar .site-cache {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.6);
+        }
+      }
+
+      .block {
+        margin-top: 3px;
+        margin-bottom: 3px;
+        border-radius: 4px;
+        flex-direction: row;
+        display: block;
+        width: auto;
+        border: none;
+        background-color: #2962ff;
+        color: white;
+        padding: 10px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+      }
+
+      .block:hover {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+          rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        background-color: #ddd;
+        color: black;
+      }
+
+      h3 {
+        text-align: center;
+        max-width: 320px;
+      }
+
+      .button-area {
+        margin: 5px auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 320px;
+      }
+
+      .button-area a {
+        background: #ff9b05;
+        padding: 1em 2.4em;
+        font-size: 0.9em;
+        margin: 1em;
+        color: white;
+        text-decoration: none;
+        flex-grow: 1;
+        text-align: center;
+      }
+
+      .button-area-line {
+        margin: 1px auto;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -moz-flex-direction: row;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        max-width: 100%;
+      }
+
+      .button-area-line a {
+        background: #ff9b05;
+        padding: 1em;
+        font-size: 0.9em;
+        margin: 0.3em;
+        color: white;
+        text-decoration: none;
+        flex-grow: 1;
+        text-align: center;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      .modal-content {
+        background-color: white;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 50%;
+        text-align: center;
+        position: relative;
+      }
+
+      .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 28px;
+        font-weight: bold;
+        color: #aaa;
+        padding: 0 12px;
+        cursor: pointer;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
       }
     </style>
-</head>
+    <!-- partial:index.partial.html -->
+    <div class="site-container">
+      <div class="site-pusher">
+        <header class="header">
+          <a href="#" class="header__icon" id="header__icon"></a>
+          <a href="#" class="header__logo">File to Link Bot</a>
+          <nav class="menu">
+            <a href="/">Home</a>
+            <a href="#">Contact</a>
+          </nav>
+        </header>
+        <div class="site-content">
+          <div class="containerbox">
 
-<body>
-	
-    <header>
-        <marquee bgcolor="#FFFFFF"
-<div class="toogle"></div>
-        <div  id="file-name">
-         🎬 Watch "%s" Online Now 🍿
+            <h4>{{ filename }} - {{file_size}}</h4>
+
+           <div style="margin-bottom: 20px; margin-top:20px">{{ ad1 | safe }}</div>
+
+            <!--Video Player Start-->
+
+            <div class="container">
+              <video
+                id="myVideo"
+                controls=""
+                src="{{ src }}"
+                width="100%"
+                height="auto"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
+            <script>
+              const controls = [
+                "rewind",
+                "play",
+                "fast-forward",
+                "progress",
+                "current-time",
+                "duration",
+                "captions",
+                "settings",
+                "pip",
+                "airplay",
+                "fullscreen",
+              ];
+              document.addEventListener("DOMContentLoaded", () => {
+                const player = Plyr.setup("#myVideo", {
+                  controls,
+                  adTagUrl:"https://www.videosprofitnetwork.com/watch.xml?key=29654bca221e8261067ac49af92b392b",
+                  skipButton:{enabled: true, text: 'Skip ad', delay: 10}
+                });
+              });
+            </script>
+           
+            <!--Video Player End-->
+
+             <div style="margin-bottom: 20px;margin-top:20px">{{ ad2 | safe }}</div>
+            
+            <!--Button Start-->
+            <div class="con1">
+              <div id="link-content" class="link_content">
+                <div class="button-area-line">
+                  <a
+                    id="demo2"
+                    href="intent:{{src}}#Intent;package=com.mxtech.videoplayer.ad;S.title={{filename}};end"
+                    class="block"
+                  >
+                    <i class="fa fa-play"></i> Stream MX
+                  </a>
+                  <a
+                    id="demo1"
+                    href="vlc://{{src}}"
+                    class="block"
+                  >
+                    <i class="fa fa-play"></i> Stream VLC
+                  </a>
+                </div>
+                <a id="demo3" onclick="showLinkModal('{{src}}')" class="block">
+                  <i class="fa fa-download"></i> Download File (open in New Tab)
+                </a>
+              </div>
+
+              <div id="link-modal" class="modal">
+                <div class="modal-content">
+                  <span class="close" onclick="closeLinkModal()">&times;</span>
+                  <p>The link will be shown in 5 seconds:</p>
+                  <p id="link-timer">5</p>
+                  <p id="link"></p>
+                  <div>{{ad5}}</div>
+                </div>
+              </div>
+
+              {{ ad3 | safe }}
+
+              <div class="alert">
+                <span
+                  class="closebtn"
+                  onclick="this.parentElement.style.display='none';"
+                  >×</span
+                >
+                <strong>Notice!</strong> Video Not Playing or Sound not comes?
+                <a href="#C4" style="color: darkorange">
+                  <b>Get Help</b>
+                </a>
+              </div>
+
+              {{ ad4 | safe }}
+
+              <!-- partial -->
+              <p>
+                <b>How to use ?</b>
+                <br />
+                use our telegram bot
+                <a
+                  href="https://telegram.me/{{bot_usename}}"
+                  style="color: darkorange"
+                >
+                  <b>file to link</b>
+                </a>
+                forward any video file to the bot and get a direct stream link
+                of file without downloading it. <br />
+                <br />
+
+                <a>
+                <h7>Join us on Telegram to get more amazing movies like this:</h7>
+                <center><a href="https://telegram.me/m_house786" class="tg-btn" style="font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; text-decoration: none; color: #FFFFFF; background-color: green; padding: 10px 20px; border-radius: 5px; border: none;">
+                 Join my update channel
+                <br />
+                      </a></center>
+                </a>
+                <br />
+
+
+                      </a><b>Disclamer</b>
+                <br />
+                This website only provide service that help you play your video
+                online withou downloading. <br />
+                This website does not provide a storage/dissemination function.
+                You can report the video that contains a problem like copyright,
+                porn, violence, etc,                 <a
+                  href="https://telegram.me/m_house786"
+                  style="color: darkorange"
+                >
+                  <b>Report</b>
+                </a>
+              </p>
+              <div class="alert">
+                <p id="C4">
+                  <strong>Solution</strong> Video not playing ? possibly because
+                  your browser or the player doesn't support codec please
+                  download and watch. or use to stream in
+                  <a
+                    href="https://aliensold.com/t26zfdiea?key=8ee6d1cd8226b2bda8a34f261c4bd3d6"
+                    style="color: #3987e8"
+                  >
+                    <b>MX PLAYER</b>
+                  </a>
+                  or
+                  <a href="#" style="color: #f78400">
+                    <b> VLC PLAYER</b>
+                  </a>
+                  for batter experiance.
+                </p>
+              </div>
+            </div>
+              <!-- SHORT URL Download -->
+            </div>
+            <!-- END container -->
+          </div>
+          <!-- END site-content -->
+          <div class="site-cache" id="site-cache"></div>
         </div>
-</marquee>
-    </header>
+        <!-- END site-pusher -->
+      </div>
+      <!-- END site-container -->
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script>
+        function showLinkModal(link) {
+          var modal = document.getElementById("link-modal");
+          var linkElem = document.getElementById("link");
+          linkElem.innerHTML = "";
+          modal.style.display = "block";
+          var seconds = 5;
+          var timerElem = document.getElementById("link-timer");
+          var interval = setInterval(function () {
+            seconds--;
+            timerElem.innerHTML = seconds;
+            if (seconds == 0) {
+              clearInterval(interval);
+              timerElem.innerHTML = "";
+              window.location.href = link;
+              closeLinkModal()
+            }
+          }, 1000);
+        }
 
-    <div class="container">
-        <tag src="%s" class="player"></tag>
+        function closeLinkModal() {
+          var modal = document.getElementById("link-modal");
+          modal.style.display = "none";
+        }
+      </script>
+
+      <div> {{ ad6 | safe }} </div>
     </div>
-
-    <footer>
-<style>
-  .play-btn {
-    display: inline-block;
-    background-color: #0a71f7;
-    padding: 10px 60px;
-    border-radius: 50px;
-    color: #FFFFFF;
-    font-weight: 500;
-    transition: all 0.3s ease-in-out;
-    margin-right: 20px;
-  }
-
-  .play-btn:hover {
-    background-color: #087bff;
-    color: #FFFFFF;
-  }
-
-  .vlc-btn {
-    display: inline-block;
-    background-color: #ff760d;
-    padding: 10px 30px;
-    border-radius: 50px;
-    color:#FFFFFF;
-    font-weight: 500;
-    transition: all 0.3s ease-in-out;
-    margin-right: 20px;
-  }
-
-  .vlc-btn:hover {
-    background-color: #fa7f0c;
-    color: #FFFFFF;
-  }
-
-  .download-btn {
-    display: inline-block;
-    background-color: #f50a0a;
-    padding: 10px 30px;
-    border-radius: 50px;
-    color: #FFFFFF;
-    font-weight: 500;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .download-btn:hover {
-    background-color: #ed0707;
-  }
-  
-  .vlc.vlc-btn {
-    display: inline-block;
-    background-color: #6df70a;
-    padding: 10px 30px;
-    border-radius: 50px;
-    color: #FFFFFF;
-    font-weight: 500;
-    transition: all 0.3s ease-in-out;
-    margin-right: 20px;
-  }
-
-
-  .tg-btn {
-    display: inline-block;
-    background-color: #E6E6FA;
-    padding: 20px 40px;
-    border-radius: 50px;
-    color: black;
-    font-weight: 500;
-    transition: all 0.3s ease-in-out;
-    margin-right: 20px;
-  }
-
-  .tg-btn:hover {
-    background-color: #D8BFD8;
-    color: #FFFFFF;
-  }
-</style>
-	    <center><h4>Having trouble playing the video? Try downloading or playing in another player.</h4>
-  <div class="btn-container">
-    <a href="intent:%s#Intent;package=com.mxtech.videoplayer.ad;S.title=Power by @iPapcornPrime ;end" class="play-btn">𝗣𝗹𝗮𝘆 𝗠𝗫 𝗽𝗹𝗮𝘆𝗲𝗿</a> <h5></h5><center> <a href="vlc://%s" class="vlc-btn">𝗣𝗹𝗮𝘆 𝗩𝗟𝗖 & 𝗩𝗗𝗫 𝗣𝗹𝗮𝘆𝗲𝗿𝘀</a>
-    <h6></h6>
-    <center><a href="%s" class="download-btn">𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝗙𝗶𝗹𝗲𝘀</a>
-  </div>
-  <h7>Join us on Telegram to get more amazing movies like this:</h7>
- <center><a href="https://telegram.me/iPapcornPrime" class="tg-btn" style="font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; text-decoration: none; color: #FFFFFF; background-color: black; padding: 10px 20px; border-radius: 5px; border: none;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/512px-Telegram_2019_Logo.svg.png" alt="Telegram Logo" width="20" height="20" style="margin-right: 5px;">
-  Join i Papcorn Prime on Telegram
-</a></center>
-    </footer>
-    <script src="https://cdn.plyr.io/3.6.9/plyr.js"></script>
-	<script>
-        const controls = [
-              'play-large',
-              'rewind',
-              'play', 
-              'fast-forward', 
-              'progress', 
-              'current-time',
-              'duration',
-              'mute',
-              'volume',
-              'captions',
-              'settings',
-              'pip',
-              'airplay',
-              'download',
-              'fullscreen'
-            ];
-        document.addEventListener('DOMContentLoaded', () => {
-            const player = Plyr.setup('.player', { controls });
-        });
-
-        const body = document.querySelector('body');
-        const footer = document.querySelector('footer');
-        const toogle = document.querySelector('.toogle');
-    </script>
-</body>
+  </body>
 </html>
