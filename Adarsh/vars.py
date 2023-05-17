@@ -9,9 +9,9 @@ load_dotenv()
 
 class Var(object):
     MULTI_CLIENT = False
-    API_ID = int(getenv('API_ID', "19455849"))
-    API_HASH = str(getenv('API_HASH', "71498d69fad014add7e9f717bfde4b79"))
-    BOT_TOKEN = str(getenv('BOT_TOKEN', "5338333469:AAHgB-RUICoWn2TGV4P9pe77ZBfD72BZ-1E"))
+    API_ID = int(getenv('API_ID', ""))
+    API_HASH = str(getenv('API_HASH', ""))
+    BOT_TOKEN = str(getenv('BOT_TOKEN', ""))
     name = str(getenv('name', 'filetolinkbot'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '4'))
@@ -37,6 +37,6 @@ class Var(object):
         URL = "https://{}/".format(FQDN)
     else:
         URL = "https://{}/".format(FQDN)
-    DATABASE_URL = str(getenv('DATABASE_URL', "mongodb+srv://telegram:12345@cluster0.awkybfo.mongodb.net/?retryWrites=true&w=majority"))
+    DATABASE_URL = str(getenv('DATABASE_URL', ""))
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', None))
     BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001362659779")).split())) 
